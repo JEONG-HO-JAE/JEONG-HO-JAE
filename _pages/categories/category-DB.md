@@ -1,5 +1,5 @@
 ---
-title: "DatBase"
+title: "DataBase"
 layout: archive
 permalink: categories/db
 author_profile: true

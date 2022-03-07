@@ -4,8 +4,7 @@ title: first blog
 categories: pl
 tag: Language
 toc: true
-sidebar:
-  nav: "docs"
+
 ---
 
 Hello~
