@@ -1,6 +1,6 @@
 ---
 layout: single
-title: first blog
+title: Almost before we knew it, we had left the ground.
 categories: pl
 tag: Language
 toc: true
@@ -8,4 +8,4 @@ toc: true
 ---
 
 Hello~
-안녕~
+안녕하세요~
