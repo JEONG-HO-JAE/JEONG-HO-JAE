@@ -4,7 +4,6 @@ title: Almost before we knew it, we had left the ground.
 categories: pl
 tag: Language
 toc: true
-
 ---
 
 Hello~
