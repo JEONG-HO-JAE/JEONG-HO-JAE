@@ -106,11 +106,11 @@ author:
   avatar           : "/assets/images/me.jpg"
   bio              : "be humble"
   location         : "Seoul, Korea"
-  email            : 
+  email            : 98eddiehcung@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:98eddiehcung@gmail.com"
+      #url: "mailto:98eddiehcung@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
