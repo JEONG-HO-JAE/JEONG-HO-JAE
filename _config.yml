@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : "Eddie's blog"
+    shortname            : "eddies-blog-1"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -106,7 +106,7 @@ author:
   avatar           : "/assets/images/me.jpg"
   bio              : "<br>humble"
   location         : "Seoul, Korea"
-  email            : 98eddiehcung@gmail.com
+  email            : "98eddiehcung@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
