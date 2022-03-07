@@ -4,3 +4,11 @@ main:
     url: /categories/
   - title: "Tag"
     url: /tags/
+
+docs:
+  - title: Studying
+    children:
+      - title: "Program Language"
+        url: /categories/pl
+      - title: "DataBase"
+        url: /categories/db

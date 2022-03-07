@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Jeong Ho Jae"
   avatar           : "/assets/images/me.jpg"
-  bio              : "<br>humble"
+  bio              : "be humble"
   location         : "Seoul, Korea"
   email            : "98eddiehcung@gmail.com"
   links:
@@ -289,5 +289,6 @@ defaults:
       share: true
       related: true
       show_date: structure
+      sidebar_main: true
 
 data_format: "%Y-%m-%d"
