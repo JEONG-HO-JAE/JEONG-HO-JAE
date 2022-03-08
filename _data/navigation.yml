@@ -12,5 +12,7 @@ docs:
     children:
       - title: "Program Language"
         url: /categories/pl
-      - title: "DataBase"
+      - title: "Data Base"
         url: /categories/db
+      - title: "Daily Life"
+        url: /categories/dl
