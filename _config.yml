@@ -290,6 +290,5 @@ defaults:
       related: true
       show_date: structure
       sidebar_main: true
-      tod_sticky: true
 
 data_format: "%Y-%m-%d"
