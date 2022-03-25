@@ -1,7 +1,7 @@
 ---
-title: "Network Enginering"
+title: "Network"
 layout: archive
-permalink: categories/ne
+permalink: categories/nw
 author_profile: true
 sidebar_main: true
 ---
