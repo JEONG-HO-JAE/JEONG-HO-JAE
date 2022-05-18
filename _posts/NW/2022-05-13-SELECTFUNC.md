@@ -9,7 +9,7 @@ toc_sticky: true
 categories: nw
 
 date: 2022-05-13
-last_modified_at: 2022-05-13
+last_modified_at: 2022-05-18
 ---
 # IO Multiplexing
 멀티플랙싱이란 하나의 통신 채널을 동해서 다수의 사용자들에게 데이터를 전송하는 기술이다.
@@ -20,20 +20,20 @@ last_modified_at: 2022-05-13
 select 함수는 file descriptor를 이용하여 multiplexing을 가능케 한다. 0, 1, 2 (기본 file descriptor)를 제외한 3부터 file descriptor를 연결된 소켓들에게 차례로 부여하고, 해당 file descriptor에 변화가 있는지를 관찰한다. 예를 들어 4번 소켓이 서버에게 데이터를 송신하면 서버의 4번 소켓의 file descriptor는 변화가 생기고 select 함수는 이를 감지할 수 있게 되는 것이다. 코더는 select 함수가 file descriptor를 관찰하는 시간 주기와 file descriptor의 범위를 지정해 줄 수 있다.<br><br>
 
 ## fd_set mecro
-- void FD_ZERO(fd_set *fdset);
+- void FD_ZERO(fd_set *fdset);<br>
   fdset의 모든 비트를 0으로 설정하는 함수이다. fdset의 변수를 초기화해주는 함수로 select함수를 사용하기 위한 첫 단계라고 할 수 있다. <br>
   **관련 코드**
   fdset rFDS; //변수 설정
   FD_ZERO(&rFDS); //변수 초기화
   <br><br>
 
-- void FD_SET(int fd, fd_set *fdset);
+- void FD_SET(int fd, fd_set *fdset);<br>
 fdset 중에서 fd의 비트를 1로 설정하는 함수이다. 만약 서버에 접속하고자하는 클라이언트가 있다면 해당 함수를 통해서 클라이언트에게 file descriptor를 할당하면 된다.<br>
 **관련 코드**
 FD_SET(socket_client, &rFDS);
 <br><br>
 
-- void FD_ISSET(int fd, fd_set *fdset);
+- void FD_ISSET(int fd, fd_set *fdset);<br>
 fdset에서 fd에 해당하는 비트가 1인지 아닌지를 판별해주는 함수이다. fd가 1로 설정되어있으면 양수를 반환하는 함수인데, 이는 select함수가 호출되고 나서 어떤 file descriptor에 변화가 생겼는지를 확인하기 위한 함수로 사용된다.<br>
 **관련 코드**
 // select()<br>
@@ -42,7 +42,7 @@ for (int i= 1; i<= max_socket; i++){<br>
 }<br>
 <br><br>
 
-- void FD_CLR(int fd, fd_set *fdset);
+- void FD_CLR(int fd, fd_set *fdset);<br>
 fd로 전달된 file descriptor를 fdset에서 삭제하는 함수로, 서버에서 클라이언트의 접속이 끊기면 해당 함수로 통해서 끊긴 클라이언트의 file descriptor를 소멸하는 용도로 사용된다.<br><br>
 
 ## timeval structure
@@ -52,7 +52,7 @@ struct timeval timeout;
 timeout.tv_sec = 0; //seconds
 teimout.tv_usec = 100000;//microseconds
 ```
-# socket programming with selec() - FLOW
+# socket programming with select()  - FLOW in server code
 ![Header](/assets/images/selectflow.jpg)<br>
 
 # Basic Chatting app using SELECT function
@@ -154,7 +154,9 @@ int main() {
 		    send(socket_client, temp, 2, 0);  //send client number to client
 		    // number is client's file descriptor in server
 
-		    for (int j = 4; j < socket_client; j++) {
+		    for (int j = 4; j <= max_socket; j++) {
+          if ( j == socket_client ) continue;
+          else{
                         char sys[10] = "server";
                         send(j, sys, 10, 0);
 
@@ -165,6 +167,7 @@ int main() {
                         char temp2 [50] = " has successfully entered the chat room\n";
                         strcat(text, temp2);
                         send(j, text, 4096, 0);
+                      }
                    } //send success messsages to other clients.
 		}
 
