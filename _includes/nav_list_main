@@ -7,20 +7,6 @@
       <li>
         <span class="nav__sub-title">Studying</span>
             <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "pl" %}
-                        <li><a href="/categories/pl" class="">Program Language ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "db" %}
-                    <li><a href="/categories/db" class="">Data Base ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-            </ul>
-            <ul>
             {% for category in site.categories %}
                 {% if category[0] == "nw" %}
                     <li><a href="/categories/nw" class="">Network Engineering ({{category[1].size}})</a></li>
@@ -45,8 +31,8 @@
         <span class="nav__sub-title">Other than studying</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "dl" %}
-                        <li><a href="/categories/dl" class="">Daily Life ({{category[1].size}})</a></li>
+                    {% if category[0] == "http" %}
+                        <li><a href="/categories/http" class="">HTTP ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
