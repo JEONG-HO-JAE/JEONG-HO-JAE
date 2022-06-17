@@ -34,6 +34,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            </li>
         <span class="nav__sub-title">Other than studying</span>
         <ul>
             {% for category in site.categories %}
