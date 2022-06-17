@@ -27,8 +27,6 @@
                 {% endif %}
             {% endfor %}
             </ul>
-
-        <span class="nav__sub-title">Other than studying</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "http" %}
@@ -36,6 +34,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Other than studying</span>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "dl" %}
+                    <li><a href="/categories/http" class="">Daily Life({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
       </li>
   </ul>
 </nav>
