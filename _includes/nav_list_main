@@ -13,6 +13,7 @@
                 {% endif %}
             {% endfor %}
             </ul>
+
             <ul>
             {% for category in site.categories %}
                 {% if category[0] == "ec" %}
@@ -20,6 +21,7 @@
                 {% endif %}
             {% endfor %}
             </ul>
+
             <ul>
             {% for category in site.categories %}
                 {% if category[0] == "os" %}
@@ -27,6 +29,7 @@
                 {% endif %}
             {% endfor %}
             </ul>
+            
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "http" %}
@@ -34,7 +37,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            </li>
+
         <span class="nav__sub-title">Other than studying</span>
         <ul>
             {% for category in site.categories %}
