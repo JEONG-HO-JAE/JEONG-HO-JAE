@@ -29,7 +29,7 @@
                 {% endif %}
             {% endfor %}
             </ul>
-            
+
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "http" %}
@@ -42,7 +42,7 @@
         <ul>
             {% for category in site.categories %}
                 {% if category[0] == "dl" %}
-                    <li><a href="/categories/http" class="">Daily Life({{category[1].size}})</a></li>
+                    <li><a href="/categories/dl" class="">Daily Life({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
