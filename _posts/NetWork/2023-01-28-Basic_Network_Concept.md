@@ -14,6 +14,6 @@ last_modified_at: 2023-01-28
 <br/>
 # 웹의 동작 원리
 
-![image](F:\Github\JEONG-HO-JAE.github.io\assets\images\webConcept.png)<br/>
+![image](.\posts\NetWork\webConcept.png)
 
 http://www.tcpschool.com/webbasic/works
