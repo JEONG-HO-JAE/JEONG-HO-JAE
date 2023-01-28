@@ -8,41 +8,26 @@
         <span class="nav__sub-title">Studying</span>
             <ul>
             {% for category in site.categories %}
-                {% if category[0] == "nw" %}
-                    <li><a href="/categories/nw" class="">Network Engineering ({{category[1].size}})</a></li>
+                {% if category[0] == "network" %}
+                    <li><a href="/categories/network" class="">Network Engineering ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             </ul>
 
             <ul>
             {% for category in site.categories %}
-                {% if category[0] == "ec" %}
-                    <li><a href="/categories/ec" class="">Economy({{category[1].size}})</a></li>
+                {% if category[0] == "economy" %}
+                    <li><a href="/categories/economy" class="">Economy({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             </ul>
 
-            <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "os" %}
-                    <li><a href="/categories/os" class="">Operating System({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-            </ul>
-
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "http" %}
-                        <li><a href="/categories/http" class="">HTTP ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
 
         <span class="nav__sub-title">Other than studying</span>
         <ul>
             {% for category in site.categories %}
-                {% if category[0] == "dl" %}
-                    <li><a href="/categories/dl" class="">Daily Life({{category[1].size}})</a></li>
+                {% if category[0] == "dailylife" %}
+                    <li><a href="/categories/dailylife" class="">Daily Life({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>

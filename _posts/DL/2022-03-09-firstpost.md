@@ -6,7 +6,7 @@ toc: true
 toc_label: About
 toc_sticky: true
 
-categories: dl
+categories: dailylife
 
 
 date: 2022-03-09
