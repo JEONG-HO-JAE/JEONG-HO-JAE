@@ -54,7 +54,7 @@ IP주소 체계로 표현할 수 있는 주소의 가지수는 한정되어있�
 <br>
 
 ## VLAN
-![image](\assets\images\vlan.png)
+![image](\assets\images\VLAN.png)
 <br>
 위 예시를 VLAN개념을 적용하면 위 그림과 같다. 두 개의 VLAN이 있으며 각 VLAN 내 통신기기들과는 통신이 가능하다. 허나 VLAN 간 통신은 라우터 도움 없이 스위치 (데이터 링크 계층) 단계에서는 불가능하다.<br>
 VLAN간 통신을 위해서는 라우터로 페킷을 보내야하고 이 데이터를 처리해주는 기능이 inter VLAN routing이다.
