@@ -1,6 +1,6 @@
 ---
 title: Basic Concept of Network
-excerpt: LAN / WAN / Switch / Router 
+excerpt: LAN / WAN / Switch / Router / IP / VLAN
 
 toc: true
 toc_label: About
@@ -9,7 +9,7 @@ toc_sticky: true
 categories: network
 
 date: 2023-02-22
-last_modified_at: 2023-02-22
+last_modified_at: 2023-02-23
 ---
 <br>
 # Basic Concept
@@ -41,3 +41,24 @@ Data link 계층에서 작동하는 네트워크 기기로 물리적 포트에 �
 ## Router
 Network link 계층에서 작동하는 네트워크 기기로 IP주소를 기반으로 작동한다. 라우터의 주 기능은 **패킷의 위치를 추출하여, 그 위치에 대한 최적의 경로를 지정하여 패킷을 다음 장치로 보내는 것이다.** 또한 라우터의 대표적인 기능은 **NAT, Firewall, VPN** 등이 있다.
 <br>
+
+## IP Address in LAN
+IP주소 체계로 표현할 수 있는 주소의 가지수는 한정되어있다. 공인 IP주소를 제외하고 회사나 가정 내 통신 기기들은 고유 IP주소를 갖고 있지 않다. **즉 LAN 환경의 통신 기기들이 인터넷 통신을 위해서는 라우터의 도움을 받아야 한다.**
+<br>
+
+### Example
+![image](\assets\images\lanaddress.png)
+<br>
+
+위 그림과 같이 회사안에서는 여러 통신 기기들은 스위치에 연결되어 있으며 도메인별로 IP 주소를 할당할 수 있다. 스위치의 IP가 192.168.10.0/24 라고 하고 스위치 아래 subnet mask를 192.168.10.128 (=192.168.10.1000 0000)라고 하자. 이와 같이 IP 체계를 설정하면 총 2개의 subnet을 만들 수 있다. 하나는 192.168.10.0/25 대역이고 또 다른 하나는 192.168.10.128/25이다. 이렇게 LAN안에 여러개의 대역을 설정하는 것을 VLAN이라고 한다.
+<br>
+
+## VLAN
+![image](\assets\images\vlan.png)
+<br>
+위 예시를 VLAN개념을 적용하면 위 그림과 같다. 두 개의 VLAN이 있으며 각 VLAN 내 통신기기들과는 통신이 가능하다. 허나 VLAN 간 통신은 라우터 도움 없이 스위치 (데이터 링크 계층) 단계에서는 불가능하다.<br>
+VLAN간 통신을 위해서는 라우터로 페킷을 보내야하고 이 데이터를 처리해주는 기능이 inter VLAN routing이다.
+<br>
+
+## WAN
+LAN끼리 통신을 WAN에서 이루어진다. LAN에서 다른 LAN으로 데이터를 보내야 할 경우 라우터끼리 통신이 필요하다. **즉 한 쪽에 붙어있는 LAN의 라우터가 목적지에 붙어있는 라우터로 통신해야하고 그 과정 안에는 다수의 라우터들이 존재한다.** 여기서 라우터는 최종 목적지까지 가장 빠르고 효율적인 경로를 찾아 데이터 통신이 빠르게 이루어질 수 있도록 하는 기능이 있다.<br>
